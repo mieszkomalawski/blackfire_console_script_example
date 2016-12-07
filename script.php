@@ -14,9 +14,4 @@ if ($resultPower%2 == 1){
   return $resultat;
 }
 
-
-$probe = \BlackfireProbe::getMainInstance();
-
-$probe->enable();
 danspower(9,15);
-$probe->disable();
