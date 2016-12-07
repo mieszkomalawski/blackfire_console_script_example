@@ -1,22 +1,29 @@
 <?php
 
+function nbYear($p0, $percent, $aug, $p) {
+    if(!$percent && !$aug){
+        return 0;
+    }
+    if(!$p0){
+        return 0;
+    }
+    if($p0 >= $p){
+        return 0;
+    }
 
-function danspower($num, $power) {
-     
-  $resultPower = pow($num, $power);
-
-if ($resultPower%2 == 1){
-  $resultat = (round($resultPower/10))*10;
-
-}else{
-  $resultat = $resultPower;
-}
-  return $resultat;
+    $population = $p0;
+    $years = 0;
+    $percentConverted = $percent/100;
+    while($population < $p){
+        $population += $population * ($percentConverted) + $aug;
+        $years++;
+    }
+    return $years;
 }
 
 
 $probe = \BlackfireProbe::getMainInstance();
 
 $probe->enable();
-danspower(9,15);
+nbYear(100, 5, 20, 200000);
 $probe->disable();
