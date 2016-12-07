@@ -1,18 +1,5 @@
 <?php
 
-/*function danspower($num, $power) {
-  $result = pow($num, $power);
-  if($result % 2 === 0){
-      return $result;
-  }
-  
-  $leftOver = $result % 10;
-  
-  if($leftOver > 4){
-     $result += 10;
-  }
-  return $result - $leftOver;
-}*/
 
 function danspower($num, $power) {
      
@@ -27,21 +14,6 @@ if ($resultPower%2 == 1){
   return $resultat;
 }
 
-  
-
-/*function danspower($num, $power){
-  $result = pow($num, $power);
-  if($result % 2 === 0){
-      return $result;
-  }
-  
-  $leftOver = $result % 10;
-  
-  if($leftOver > 4){
-     return $result + 10 - $leftOver;
-  }
-  return $result - $leftOver;
-}*/
 
 $probe = \BlackfireProbe::getMainInstance();
 
